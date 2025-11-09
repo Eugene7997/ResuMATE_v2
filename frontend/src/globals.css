@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Color Scheme inspired by the design */
+  
+  /* Primary Colors */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6; /* Main blue for buttons */
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  
+  /* Background Colors */
+  --color-background-light: #ceebff;
+  --color-background-lighter: #9bd7ff;
+  --color-background-white: #ffffff;
+  
+  /* Text Colors */
+  --color-text-primary: #0f172a; /* Dark text for headings */
+  --color-text-secondary: #334155; /* Medium text for body */
+  --color-text-muted: #64748b; /* Muted text for placeholders */
+  
+  /* Card/Container */
+  --color-card-bg: #ffffff;
+  --color-card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --color-card-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  
+  /* Borders */
+  --color-border-light: #e2e8f0;
+  --color-border-default: #cbd5e1;
+  
+  /* Button Hover States */
+  --color-button-hover: #2563eb;
+  --color-button-active: #1d4ed8;
+
+  /* Font Family */
+  --font-hedvig: "Hedvig Letters Serif", serif;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-hedvig);
+  background: linear-gradient(
+    to bottom,
+    var(--color-background-white) 0%,
+    var(--color-background-light) 100%
+  );
+  background-attachment: fixed;
+  color: var(--color-text-secondary);
+}
+
+/* Utility classes for the color scheme */
+.bg-primary {
+  background-color: var(--color-primary-500);
+}
+
+.bg-primary-hover:hover {
+  background-color: var(--color-button-hover);
+}
+
+.text-primary {
+  color: var(--color-primary-600);
+}
+
+.bg-card {
+  background-color: var(--color-card-bg);
+  box-shadow: var(--color-card-shadow);
+}
+
+.bg-page {
+  background-color: var(--color-background-light);
+}
+
