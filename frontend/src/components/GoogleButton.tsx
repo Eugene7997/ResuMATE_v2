@@ -1,8 +1,6 @@
-import React from "react"
+import type { GoogleButtonProps } from '@/types/types';
 
-const GoogleButton = ({ onClick, disabled = false }) => {
-  
-
+const GoogleButton = ({ onClick, disabled = false }: GoogleButtonProps) => {
   return (
     <button
       type="button"

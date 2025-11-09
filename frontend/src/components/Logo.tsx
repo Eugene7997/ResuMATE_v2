@@ -1,4 +1,4 @@
-const Logo = ({ className }) => {
+const Logo = ({ className }: { className?: string }) => {
   return (
     <h1 className={`text-2xl font-bold ${className || ''}`}>
       <span className="text-black">resum</span>

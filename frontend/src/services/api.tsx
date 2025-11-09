@@ -1,19 +1,13 @@
 const API_BASE_URL = `${import.meta.env.VITE_BACKEND_URL}/api/v1`;
 
 // Helper function to handle API responses
-const handleResponse = async (response) => {
+const handleResponse = async (response: Response) => {
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
     throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
   }
   return response.json();
 };
-
-// Helper function to get auth headers
-const getAuthHeaders = () => ({
-  'Content-Type': 'application/json',
-  credentials: 'include',
-});
 
 // Auth API
 export const authApi = {
@@ -36,7 +30,7 @@ export const authApi = {
   },
 
   // Delete user account
-  deleteUser: async (userId) => {
+  deleteUser: async (userId: string) => {
     const response = await fetch(`${API_BASE_URL}/auth/delete/${userId}`, {
       method: 'DELETE',
       credentials: 'include',

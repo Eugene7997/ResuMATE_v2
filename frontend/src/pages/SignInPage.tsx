@@ -1,12 +1,12 @@
 import { useState } from "react"
-import { useNavigate, Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useAuthStore } from "../stores/authStore"
 import GoogleButton from '../components/GoogleButton'
 
 const SignInPage = () => {
   const navigate = useNavigate()
   const { login } = useAuthStore()
-  const [errors, setErrors] = useState([])
+  const [errors, setErrors] = useState<string[]>([])
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const loginWithGooglePopup = async () => {
@@ -26,7 +26,7 @@ const SignInPage = () => {
       }
 
       // Listen for messages from the popup
-      const messageListener = async (evt) => {
+      const messageListener = async (evt: any) => {
         // Only accept messages with the expected structure to ensure security
         if (!evt.data || typeof evt.data !== 'object') return
         if (!evt.data.type || (evt.data.type !== 'oauth-success' && evt.data.type !== 'oauth-error')) return
@@ -69,7 +69,7 @@ const SignInPage = () => {
           setIsSubmitting(false)
         }
       }, 300000) // 5 minutes
-    } catch (error) {
+    } catch (error: any) {
       console.error("Google sign-in error:", error)
       setErrors([error.message || "Failed to sign in with Google"])
     } finally {

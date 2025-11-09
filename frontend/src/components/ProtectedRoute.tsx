@@ -1,7 +1,9 @@
+import type React from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
 import { useAuthStore } from '../stores/authStore'
+import type { ProtectedRouteProps } from '../types/types'
 
-const ProtectedRoute = ({ children, redirectTo = '/sign-in' }) => {
+const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children, redirectTo = '/sign-in' }) => {
   const { isAuthenticated, isLoading } = useAuthStore()
   const location = useLocation()
 

@@ -1,5 +1,5 @@
-import NavBar from '../components/Navbar'
-import PrimaryButton from '../components/PrimaryButton'
+import NavBar from '@components/NavBar'
+import PrimaryButton from '@components/PrimaryButton'
 
 const HomePage = () => {
   return (
