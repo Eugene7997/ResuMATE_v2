@@ -1,4 +1,4 @@
-# 🚀 ResumATE
+# 🚀 ResumATEv2
 
 **Project:** ResumATEv2  
 **Technologies:** React, TailwindCSS, ShadCN UI, NodeJS, ExpressJS, FastAPI, OpenAI Agents SDK, PostgreSQL  
