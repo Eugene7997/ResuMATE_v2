@@ -1,8 +1,14 @@
-import React from 'react'
+import NavBar from '../components/Navbar'
+import PrimaryButton from '../components/PrimaryButton'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+      <NavBar />
+      <p>Welcome to the Home Page!</p>
+      <PrimaryButton>✨ Generate</PrimaryButton>
+
+    </div>
   )
 }
 
