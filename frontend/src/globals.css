@@ -77,3 +77,27 @@ body {
   background-color: var(--color-background-light);
 }
 
+@layer utilities {
+  .btn-primary {
+    @apply text-white font-semibold rounded-lg transition-transform transform inline-flex items-center gap-2;
+    background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-400));
+    box-shadow: 0 6px 18px rgba(59,130,246,0.18);
+    padding: 0.5rem 1rem;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-600));
+    box-shadow: 0 10px 24px rgba(37,99,235,0.18);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 12px rgba(29,78,216,0.12);
+  }
+
+  .btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 8px rgba(59,130,246,0.08);
+  }
+}
+
