@@ -1,0 +1,10 @@
+const Logo = ({ className }) => {
+  return (
+    <h1 className={`text-2xl font-bold ${className || ''}`}>
+      <span className="text-black">resum</span>
+      <span className="text-blue-500">ate</span>
+    </h1>
+  );
+};
+
+export default Logo;
