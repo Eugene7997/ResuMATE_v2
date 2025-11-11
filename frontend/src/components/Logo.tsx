@@ -1,6 +1,6 @@
 const Logo = ({ className }: { className?: string }) => {
   return (
-    <h1 className={`text-2xl font-bold ${className || ''}`}>
+    <h1 className={`text-3xl font-bold ${className || ''}`}>
       <span className="text-black">resum</span>
       <span className="text-blue-500">ate</span>
     </h1>

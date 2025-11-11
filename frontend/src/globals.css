@@ -26,10 +26,15 @@
   --color-text-secondary: #334155; /* Medium text for body */
   --color-text-muted: #64748b; /* Muted text for placeholders */
   
+  /* Input */
+  --color-input-bg: #ffffff;
+  --color-input-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --color-input-shadow-lg: 0 8px 10px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
   /* Card/Container */
-  --color-card-bg: #ffffff;
-  --color-card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --color-card-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --color-secondary-card-bg: #fcffff;
+  --color-secondary-card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --color-secondary-card-shadow-lg: 0 7px 9px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   
   /* Borders */
   --color-border-light: #e2e8f0;
@@ -55,7 +60,6 @@ body {
   color: var(--color-text-secondary);
 }
 
-/* Utility classes for the color scheme */
 .bg-primary {
   background-color: var(--color-primary-500);
 }
@@ -68,9 +72,9 @@ body {
   color: var(--color-primary-600);
 }
 
-.bg-card {
-  background-color: var(--color-card-bg);
-  box-shadow: var(--color-card-shadow);
+.bg-secondary-card {
+  background-color: var(--color-secondary-card-bg);
+  box-shadow: var(--color-secondary-card-shadow);
 }
 
 .bg-page {
@@ -79,25 +83,56 @@ body {
 
 @layer utilities {
   .btn-primary {
-    @apply text-white font-semibold rounded-lg transition-transform transform inline-flex items-center gap-2;
-    background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-400));
-    box-shadow: 0 6px 18px rgba(59,130,246,0.18);
-    padding: 0.5rem 1rem;
+    @apply px-4 py-2 text-white font-semibold rounded-lg transition-transform transform inline-flex items-center gap-2;
+    background: linear-gradient(to right, var(--color-primary-700), var(--color-primary-600), var(--color-primary-500), var(--color-primary-400));
   }
 
   .btn-primary:hover {
-    background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-600));
-    box-shadow: 0 10px 24px rgba(37,99,235,0.18);
+    background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-700));
   }
 
   .btn-primary:active {
-    transform: translateY(0);
-    box-shadow: 0 6px 12px rgba(29,78,216,0.12);
+    background: var(--color-primary-700);
   }
 
   .btn-primary:focus {
     outline: none;
-    box-shadow: 0 0 0 8px rgba(59,130,246,0.08);
+  }
+
+  .secondary-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    transform: translateY(0);
+    background: var(--color-secondary-card-bg);
+    box-shadow: var(--color-secondary-card-shadow);
+  }
+
+  .secondary-card:hover {
+    box-shadow: var(--color-secondary-card-shadow-lg);
+  }
+
+  .secondary-card:active {
+    box-shadow: var(--color-secondary-card-shadow);
+  }
+
+  .primary-input {
+    @apply bg-input-bg mt-2 mb-4 mx-4 p-2 rounded-lg;
+    box-shadow: var(--color-input-shadow);
+    border: 1px solid var(--color-input-bg);
+  }
+
+  .primary-input:hover {
+    @apply bg-white mt-2 mb-4 mx-4 p-2 rounded-lg;
+    box-shadow: var(--color-input-shadow-lg);
+    border: 1px solid var(--color-border-default);
+  }
+
+  .primary-input:focus {
+    @apply bg-white mt-2 mb-4 mx-4 p-2 rounded-lg;
+    box-shadow: var(--color-input-shadow-lg);
+    border: 1px solid var(--color-border-default);
+    outline: none;
   }
 }
 

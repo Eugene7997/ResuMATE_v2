@@ -28,3 +28,12 @@ export interface ProtectedRouteProps {
   children: React.ReactNode;
   redirectTo?: string;
 }
+
+export interface CardProps {
+  children?: React.ReactNode
+  className?: string
+}
+
+export interface PrimaryInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  className?: string
+}
