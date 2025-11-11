@@ -1,4 +1,4 @@
-import type { GoogleButtonProps } from '@/types/types';
+import type { GoogleButtonProps } from "@lib/types/types";
 
 const GoogleButton = ({ onClick, disabled = false }: GoogleButtonProps) => {
   return (

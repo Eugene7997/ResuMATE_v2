@@ -1,4 +1,4 @@
-import type { CardProps } from "@/types/types";
+import type { CardProps } from "@lib/types/types";
 
 const SecondaryCard: React.FC<CardProps> = ({ children, className = "", ...props }) => {
   return (

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { useAuthStore } from '../stores/authStore'
+import { useAuthStore } from '../lib/stores/authStore'
 
 const DeleteUserButton = () => {
     const deleteUser = useAuthStore(state => state.deleteUser)

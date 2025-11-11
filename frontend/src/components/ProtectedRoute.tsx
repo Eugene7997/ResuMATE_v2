@@ -1,9 +1,9 @@
-import type React from 'react'
-import { Navigate, useLocation } from 'react-router-dom'
-import { useAuthStore } from '../stores/authStore'
-import type { ProtectedRouteProps } from '../types/types'
+import type React from "react"
+import { Navigate, useLocation } from "react-router-dom"
+import { useAuthStore } from "../lib/stores/authStore"
+import type { ProtectedRouteProps } from "@lib/types/types"
 
-const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children, redirectTo = '/sign-in' }) => {
+const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children, redirectTo = "/sign-in" }) => {
   const { isAuthenticated, isLoading } = useAuthStore()
   const location = useLocation()
 

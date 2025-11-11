@@ -1,4 +1,4 @@
-import type { PrimaryInputProps } from "@/types/types";
+import type { PrimaryInputProps } from "@lib/types/types";
 
 const PrimaryInput: React.FC<PrimaryInputProps> = ({ className = "", ...props }) => {
   return (
