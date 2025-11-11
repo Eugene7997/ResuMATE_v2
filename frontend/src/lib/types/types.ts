@@ -37,3 +37,11 @@ export interface CardProps {
 export interface PrimaryInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string
 }
+
+export type AvatarProps = React.HTMLAttributes<HTMLDivElement> & {
+  src?: string;
+  alt?: string;
+  size?: number | string;
+  initials?: string;
+  className?: string;
+};
