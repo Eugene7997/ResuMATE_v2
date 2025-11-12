@@ -45,3 +45,8 @@ export type AvatarProps = React.HTMLAttributes<HTMLDivElement> & {
   initials?: string;
   className?: string;
 };
+
+export interface ResumePointProps {
+  content: string
+  className?: string
+}

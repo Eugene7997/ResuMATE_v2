@@ -9,7 +9,7 @@ const NavBar = () => {
       <Logo />
       <div className="flex items-center gap-6">
         <Link to="/" className="text-2xl text-primary-500 font-semibold">Resume Tailor</Link>
-        <Link to="/" className="text-2xl text-text-muted font-semibold">
+        <Link to="/profile" className="text-2xl text-text-muted font-semibold">
           <div className="flex items-center gap-2">
             <span>Profile</span>
             <Avatar src={avatarPlaceholder} />
